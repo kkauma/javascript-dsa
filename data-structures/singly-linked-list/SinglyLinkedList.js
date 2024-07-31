@@ -85,4 +85,15 @@ class SinglyLinkedList {
     }
     return current;
   }
+
+  set(index, val) {
+    let foundNode = this.get(index);
+
+    if (!foundNode) {
+      return false;
+    } else {
+      foundNode.val = val;
+      return true;
+    }
+  }
 }
