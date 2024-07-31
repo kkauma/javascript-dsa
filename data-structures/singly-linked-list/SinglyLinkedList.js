@@ -138,4 +138,14 @@ class SinglyLinkedList {
     }
     return this;
   }
+
+  print() {
+    let arr = [];
+    let current = this.head;
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+    console.log(arr);
+  }
 }
