@@ -14,11 +14,14 @@ class Stack {
   push(val) {
     const newNode = new Node(val);
 
-    if (this.size === 0) {
+    if (!this.first) {
       this.first = newNode;
       this.last = newNode;
     } else {
       let temp = this.first;
+      this.first = newNode;
+      this.first.next = temp;
     }
+    return ++this.size;
   }
 }
