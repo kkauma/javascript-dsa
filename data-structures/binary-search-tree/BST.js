@@ -12,8 +12,10 @@ class BinarySearchTree {
   }
 
   insert(value) {
+    // Create a new node to be added to the tree
     const newNode = new Node(value);
 
+    // If there's no root, assign the root to be the new node
     if (!this.root) {
       this.root = newNode;
       return this;
